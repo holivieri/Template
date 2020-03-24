@@ -3,6 +3,7 @@ using API.Model.Repositories;
 using API.Web.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using NLog;
 using System;
 using System.Net;
 using System.Web.Http;

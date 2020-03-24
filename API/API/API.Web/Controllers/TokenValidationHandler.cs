@@ -9,7 +9,7 @@ using API.Model.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-
+using NLog;
 
 namespace WebAPI.web.Controllers
 {
