@@ -1,12 +1,10 @@
 ﻿using API.Model.Entities;
 using API.Model.Repositories;
-using API.Web.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NLog;
 using System;
-using System.Net;
-using System.Web.Http;
+
 using WebAPI.web.Models;
 
 namespace WebAPI.web.Controllers
@@ -75,7 +73,7 @@ namespace WebAPI.web.Controllers
 
                         TokenRepository data = new TokenRepository();
 
-                        //lo creo porque no existe, es un nuevo Login
+                        //create a token
                         data.CreateTokenForUser(userModel);
 
                         LoginResponse resp = new LoginResponse()
@@ -89,7 +87,7 @@ namespace WebAPI.web.Controllers
                     }
                     else
                     {
-                        _logger.Error("Login no autorizado para el usuario: {0} y clave: {1}", login.UserName, login.Password);
+                        _logger.Error("Non authorized: {0} password: {1}", login.UserName, login.Password);
                         return Unauthorized();
                     }
                 }
