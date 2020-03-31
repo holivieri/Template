@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit {
             .subscribe(() => this.loadAllUsers());
     }
 
+
     private loadAllUsers() {
         this.userService.getAll()
             .pipe(first())

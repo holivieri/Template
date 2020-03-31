@@ -1,8 +1,18 @@
 ﻿<h1>Hi {{currentUser.firstName}}!</h1>
 <p>You're logged in</p>
-<h3>All registered users:</h3>
-<ul>
-    <li *ngFor="let user of users">
-        {{user.username}} ({{user.firstName}} {{user.lastName}}) - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
-    </li>
-</ul>
+<h3>Users:</h3>
+<p><a routerLink="/register" class="btn btn-link">Create New User</a> </p>
+<table class="table table-bordered">
+    <thead>
+        <th>User Name</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th></th>
+    </thead>
+    <tr *ngFor="let user of users">
+        <td> {{user.username}}</td>
+        <td> {{user.firstName}}</td>
+        <td> {{user.lastName}} </td>
+        <td> <a (click)="deleteUser(user.id)" class="text-danger">Delete</a></td>
+    </tr>
+</table>
