@@ -1,4 +1,4 @@
-package com.example.orbital
+package com.hernanolivieri.adminprop_mobile
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "967895366690",
+    "firebase_url": "https://adminprop-administradores.firebaseio.com",
+    "project_id": "adminprop-administradores",
+    "storage_bucket": "adminprop-administradores.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:967895366690:android:5022d6aa04f82d83b0de7b",
+        "android_client_info": {
+          "package_name": "com.hernanolivieri.adminprop_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "967895366690-q7ihm79m1dpuuskipgddfs66cvra9gi9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hernanolivieri.adminprop_mobile",
+            "certificate_hash": "1bc88fd0aa96d4d754c9e7a75f23c8afafd87238"
+          }
+        },
+        {
+          "client_id": "967895366690-3dru1rv6v5hvsn8bbuikmrlv4rn12jk1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkrJmJX64DnmqXWzzIGNrUZ7ajYfPYRyE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "967895366690-3dru1rv6v5hvsn8bbuikmrlv4rn12jk1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

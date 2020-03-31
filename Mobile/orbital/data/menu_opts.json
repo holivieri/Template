@@ -1,0 +1,14 @@
+{
+    "nombreApp": "Orbital Profesional",
+    "rutas": [{
+            "path": "resetpassword",
+            "icon": "resetIcon",
+            "text": "Reset password"
+        },
+        {
+            "path": "logout",
+            "icon": "logoutIcon",
+            "text": "Log Out"
+        }
+    ]
+}
