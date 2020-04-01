@@ -22,3 +22,6 @@ This application authenticate the users and returns a Json Web Token (JWT)
 
 ## Testing
 There are a few Postman examples (Testing-Postman) to test the Web API.
+
+## Mobile
+There is a mobile soluion, done with Google Flutter that can be used as template for creating mobile apps.
