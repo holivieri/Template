@@ -2,11 +2,11 @@
 
 ### Includes
 
-Angular 8 front end
+## Angular 8 front end
 
-	This frontend application connect to the Web API to authenticate, register or create users.
+	This frontend application connects to the Web API to authenticate, register or create users.
 
-.NET Core 3.1 Backend (web Api)
+## .NET Core 3.1 Backend (web Api)
 
 This solution (updated to .net core 3.1) has two different environemnt
 This app is going to use the port 5500, you can change it.
@@ -20,5 +20,5 @@ If we set the environment to Production, is going to use a SQL Database (specifi
 This application authenticate the users and returns a Json Web Token (JWT)
 
 
-#Testing
+## Testing
 There are a few Postman examples (Testing-Postman) to test the Web API.
