@@ -72,7 +72,7 @@ namespace WebAPI.web.Controllers
                         var token = TokenGenerator.GenerateTokenJwt(login.UserName, "25", config);
                         _logger.Info("Token: {0}", token);
 
-                        UserModel userModel = new UserModel();
+                        AppUser userModel = new AppUser();
                         userModel.UserName = login.UserName;
                         userModel.Token = token;
                         userModel.Platform = login.Platform;

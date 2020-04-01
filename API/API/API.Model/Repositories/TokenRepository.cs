@@ -6,7 +6,7 @@ namespace API.Model.Repositories
 {
     public class TokenRepository
     {
-        public bool CreateTokenForUser(UserModel user)
+        public bool CreateTokenForUser(AppUser user)
         {
             //save to db
             return true;
