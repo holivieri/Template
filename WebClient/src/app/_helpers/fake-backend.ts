@@ -3,6 +3,7 @@ import { HttpRequest, HttpResponse, HttpHandler, HttpEvent, HttpInterceptor, HTT
 import { Observable, of, throwError } from 'rxjs';
 import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
 
+//Hernan: we can remove this.
 // array in local storage for registered users
 let users = JSON.parse(localStorage.getItem('users')) || [];
 
@@ -102,6 +103,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 }
 
 export const fakeBackendProvider = {
+    // use fake backend in place of Http service for backend-less development
     provide: HTTP_INTERCEPTORS,
     useClass: FakeBackendInterceptor,
     multi: true

@@ -11,8 +11,7 @@ module.exports = {
         }
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.ts$/,
                 use: ['ts-loader', 'angular2-template-loader']
             },
@@ -37,7 +36,7 @@ module.exports = {
         new webpack.DefinePlugin({
             // global app config object
             config: JSON.stringify({
-                apiUrl: 'http://localhost:4000'
+                apiUrl: 'http://localhost:5500'
             })
         }),
 
