@@ -2,6 +2,7 @@
 using API.Model.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using NLog;
 using System;
 
@@ -15,6 +16,12 @@ namespace WebAPI.web.Controllers
     {
 
         private static Logger _logger = LogManager.GetCurrentClassLogger();
+        private IConfiguration config;
+
+        public LoginController(IConfiguration iconfiguration)
+        {
+            config = iconfiguration;
+        }
 
 
         [HttpGet]
@@ -28,7 +35,7 @@ namespace WebAPI.web.Controllers
 
         [HttpPost]
         [Route("authenticate")]
-        public IActionResult Authenticate(LoginRequest login)
+        public IActionResult Authenticate([FromBody] LoginRequest login)
         {
             try
                 {
@@ -46,7 +53,7 @@ namespace WebAPI.web.Controllers
                         login.Platform = "Unknown";
                     }
 
-                    bool isCredentialValid = false;
+                    bool isCredentialValid = true;
                     try
                     {
                         //isCredentialValid = Membership.ValidateUser(login.UserName, login.Password);
@@ -62,14 +69,14 @@ namespace WebAPI.web.Controllers
                     if (isCredentialValid)
                     {
                         
-                        var token = TokenGenerator.GenerateTokenJwt(login.UserName, "");
+                        var token = TokenGenerator.GenerateTokenJwt(login.UserName, "25", config);
                         _logger.Info("Token: {0}", token);
 
                         UserModel userModel = new UserModel();
                         userModel.UserName = login.UserName;
                         userModel.Token = token;
                         userModel.Platform = login.Platform;
-                        userModel.PhoneId = login.PhoneId;
+                        userModel.DeviceId = login.DeviceId;
 
                         TokenRepository data = new TokenRepository();
 

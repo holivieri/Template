@@ -16,7 +16,7 @@ namespace WebAPI.web.Models
         /// <summary>
         /// Phone token identifier
         /// </summary>
-        public string PhoneId { get; set; }
+        public string DeviceId { get; set; }
 
     }
 }

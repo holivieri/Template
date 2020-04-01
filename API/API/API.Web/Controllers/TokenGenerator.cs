@@ -14,17 +14,17 @@ namespace WebAPI.web.Controllers
     /// </summary>
     internal static class TokenGenerator
     {
-        private static IConfiguration _configuration { get; }
+       // private static IConfiguration _configuration { get; }
 
-        public static string GenerateTokenJwt(string email, string propertyId)
+        public static string GenerateTokenJwt(string email, string propertyId, IConfiguration configuration)
         {
             // appsetting for Token JWT
 
             //_configuration.GetValue<string>("MailOptions:SMTP");
-            var secretKey = _configuration.GetValue<string>("Token:JWT_SECRET_KEY"); 
-            var audienceToken = _configuration.GetValue<string>("Token:JWT_AUDIENCE_TOKEN");
-            var issuerToken = _configuration.GetValue<string>("Token:JWT_ISSUER_TOKEN"); 
-            var expireTime = _configuration.GetValue<string>("Token:JWT_EXPIRE_MINUTES"); 
+            var secretKey = configuration.GetValue<string>("Token:JWT_SECRET_KEY"); 
+            var audienceToken = configuration.GetValue<string>("Token:JWT_AUDIENCE_TOKEN");
+            var issuerToken = configuration.GetValue<string>("Token:JWT_ISSUER_TOKEN"); 
+            var expireTime = configuration.GetValue<string>("Token:JWT_EXPIRE_MINUTES"); 
 
             var securityKey = new SymmetricSecurityKey(System.Text.Encoding.Default.GetBytes(secretKey));
             var signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
